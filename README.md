@@ -1,5 +1,5 @@
 # AWS Hands-On Projects
-This repository contains step-by-step guides for hands-on AWS projects
+This repository contains step-by-step guides for hands-on AWS projects done by me.
 
 ## Table Of Contents
 
