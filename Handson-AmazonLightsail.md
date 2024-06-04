@@ -1,4 +1,4 @@
-# Hands On : Using Amazon LightSail Launch a website with Load Balancer
+# Hands-On : Using Amazon LightSail Launch a website with Load Balancer
 
 Setting up two web servers, connecting them to a load balancer on Amazon Lightsail, and pointing them to a domain involves several steps. 
 Here's a detailed guide to help you through the process:
