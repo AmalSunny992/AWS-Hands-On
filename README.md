@@ -30,3 +30,5 @@ It also includes additional features like integrating with AWS Lambda, Amazon SQ
 [Detailed Guide](./Handson-SNS.md)
 
 ## License
+
+This project is licensed under the terms of the Apache license. See the LICENSE file for details.
