@@ -159,7 +159,3 @@ This guide provides step-by-step instructions to set up static website hosting o
 ## Summary
 
 This guide covers creating an S3 bucket, uploading static content, enabling static website hosting, setting up a custom domain with Route 53, and using CloudFront with TLS to secure and distribute your content. Make sure to replace placeholder names (e.g., `my-static-website-bucket`, `www.mycustomdomain.com`) with your actual bucket name and domain.
-
-# License
-
-This project is licensed under the terms of the Apache license. See the [LICENSE](./LICENSE) file for details.
