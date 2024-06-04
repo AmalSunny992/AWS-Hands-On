@@ -1,4 +1,4 @@
-# AWS S3 Static Website Hosting Guide with Route 53
+# Hands-On : AWS S3 Static Website Hosting Guide with Route 53
 
 This guide provides step-by-step instructions to set up static website hosting on AWS S3 with CloudFront and a custom domain using Route 53, ensuring that you follow the necessary steps to achieve a secure and distributed web presence.
 
