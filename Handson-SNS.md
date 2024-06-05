@@ -5,7 +5,8 @@
 2. [Prerequites](#prerequisites)
 3. [How to create an SNS](#how-to-create-an-sns)
 4. [Additional Features](#additional-features)
-5. [An Example Use Case]
+5. [An Example Use Case](#an-example-use-case)
+6. [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -32,6 +33,7 @@ This guide provides step-by-step instructions to set up Amazon Simple Notificati
    - Click "Create topic".
 
 ScreenShot:     
+
 ![image](https://github.com/AmalSunny992/AWS_Hands_On/assets/169422802/afad25b0-4fef-4143-b49d-06ab75ed6a4e)
 
 
@@ -48,6 +50,7 @@ ScreenShot:
    - Click "Create subscription".
 
 ScreenShot:
+
 ![image](https://github.com/AmalSunny992/AWS_Hands_On/assets/169422802/e5f251eb-cb3e-45fc-a326-35c9b3879dfe)
 
 3. **Confirm Subscription** (For Email Protocol):
@@ -55,6 +58,7 @@ ScreenShot:
    - Click on the confirmation link in the email to confirm the subscription.
 
 ScreenShot:
+
 ![image](https://github.com/AmalSunny992/AWS_Hands_On/assets/169422802/7abe5582-9b32-4c77-8f7b-5c686a40b2f4)
 
 ### Step 3: Publish a Message to the SNS Topic
@@ -70,6 +74,7 @@ ScreenShot:
    - Click "Publish message".
 
 ScreenShot:
+
   ![image](https://github.com/AmalSunny992/AWS_Hands_On/assets/169422802/7f3db452-005b-48ac-9210-7bcb3888dc1c)
 
 
@@ -77,6 +82,7 @@ ScreenShot:
    - Depending on the protocol you subscribed to, verify that the message was delivered (e.g., check your email inbox if you subscribed via Email).
 
 ScreenShot:
+
 ![image](https://github.com/AmalSunny992/AWS_Hands_On/assets/169422802/5e89ec2f-c3ab-43ef-8faa-6e7365084ed0)
 
 ## Additional Features
@@ -106,6 +112,7 @@ Amazon SNS notification to alert you when an EC2 instance's CPU usage exceeds 10
 - Choose Create topic.
 
 ScreenShot:
+
 ![image](https://github.com/AmalSunny992/AWS_Hands_On/assets/169422802/62dfa8cb-d570-4e71-b6c5-99b9c05cc303)
 
 ### Step 2: Create an SNS Subscription
@@ -117,6 +124,7 @@ ScreenShot:
 - Check your email inbox for a subscription confirmation email from AWS Notifications and confirm the subscription by clicking the link in the email.
 
 Screenshots:
+
 ![image](https://github.com/AmalSunny992/AWS_Hands_On/assets/169422802/57aae8cd-dbb5-4642-afa0-bb9db0a8a8b2)
 
 ![image](https://github.com/AmalSunny992/AWS_Hands_On/assets/169422802/6afb5c1d-889d-4689-8410-c7c528947dd0)
