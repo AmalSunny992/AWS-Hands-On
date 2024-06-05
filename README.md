@@ -1,3 +1,4 @@
+![Amazon AWS Badge](https://img.shields.io/badge/Amazon%20AWS-232F3E?logo=amazonaws&logoColor=fff&style=for-the-badge)
 # AWS Hands-On Projects
 This repository contains step-by-step guides for hands-on AWS projects done by me.
 
