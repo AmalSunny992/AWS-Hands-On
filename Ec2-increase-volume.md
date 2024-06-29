@@ -59,7 +59,7 @@ For ext4 or ext3 File Systems:
 
 ```bash
 sudo resize2fs /dev/xvda1
-``
+```
 Replace /dev/xvda1 with your specific device name.
 
 
