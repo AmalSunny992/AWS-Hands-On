@@ -5,8 +5,9 @@ This repository contains step-by-step guides for hands-on AWS projects done by m
 ## Table Of Contents
 
 1. [Setting up a WordPress site using LightSail and a Load Balancer](#1-wordpress-site-on-lightsail-with-load-balancer)
-3. [Hosting a static website on S3 with CloudFront and a custom domain using Route 53](#2-static-website-hosting-on-s3-with-cloudfront-and-route-53)
-4. [Creating and using Amazon Simple Notification Service (SNS)](#3-amazon-simple-notification-service-sns)
+2. [Hosting a static website on S3 with CloudFront and a custom domain using Route 53](#2-static-website-hosting-on-s3-with-cloudfront-and-route-53)
+3. [Creating and using Amazon Simple Notification Service (SNS)](#3-amazon-simple-notification-service-sns)
+4. [How to increase volume of ec2 machine](./)
 
 ## Projects Overview
 
