@@ -96,5 +96,7 @@ df -h
 ## Additional Tips
 
 **Backup Data:** Always backup your data before performing operations on your volume.
+
 **Ensure Sufficient Quota:** Verify that you have sufficient quota in your AWS account for the new volume size.
+
 **Monitor Performance:** After resizing, monitor the instance performance to ensure everything is functioning as expected.
