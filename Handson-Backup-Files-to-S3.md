@@ -75,10 +75,13 @@ crontab -e
 
 #Add the following line to schedule the script to run every day at 2 AM:
 
-0 2 * * * /home/ubuntu/your-repository/backup_to_s3.sh
+0 2 * * * ~/your-repository/backup_to_s3.sh
 
 #Save and exit the editor.
 ```
+Screenshot Cron Job:
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/739424d2-be39-4e78-99f9-dfef5b481a50)
+
 Screenshots of backed up s3 bucket : 
 
 ![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/5b3569db-110d-4d68-84ba-17b47fc61234)
