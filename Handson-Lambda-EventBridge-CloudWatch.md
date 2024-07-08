@@ -1,97 +1,67 @@
 # Automated Backup Solution with AWS CloudWatch, EventBridge, and Lambda
 
-This guide explains how to set up an automated backup solution for your server directories to an S3 bucket using AWS CloudWatch, EventBridge, and Lambda.
+Step-by-Step Guide to Back Up an EC2 Instance Named Jenkins Using AWS EventBridge and Lambda
+We'll create a solution where an AWS Lambda function backs up specific directories from an EC2 instance named Jenkins daily at 2 AM. 
+The backup will be stored in an S3 bucket and files older than 3 days will be deleted from the mentioned directories. 
+CloudWatch Logs will be used for logging.
 
-## Prerequisites
+## Step 1: Set Up IAM Roles and Policies
 
-- AWS CLI installed and configured with necessary permissions.
-- AWS IAM user with appropriate permissions to create CloudWatch, EventBridge, Lambda, and S3 resources.
-- A pre-existing S3 bucket to store the backups.
+Create an IAM Role for the EC2 instance (Jenkins) with the necessary permissions to allow the Lambda function to access it. Attach the following policy to the role
 
-## Steps
+Create an IAM Role for Lambda with the following policy to allow necessary actions
 
-### 1. Create IAM Role for Lambda
+## Step 2: Create the Lambda Function
 
-Create an IAM role that Lambda will use to execute the backup script and access S3.
+Create a Lambda function in the AWS Management Console.
 
-1. Go to the IAM console.
+Upload the following script as the Lambda function ([lambda_function.py](./lambda_function.py))
 
-2. Create a new role with the following permissions:
-   - AWSLambdaBasicExecutionRole
-   - AmazonS3FullAccess
+## Step 3: Create an EventBridge Rule
+Navigate to the EventBridge console and create a new rule.
 
-3. Note the ARN of the newly created role.
+Configure the rule to trigger at 2 AM every day:
 
-### 2. Create Lambda Function
+- Rule type: Schedule
+- Schedule pattern: cron(0 2 * * ? *)
+- Set the target to the Lambda function created in Step 2.
 
-Create a Lambda function that will execute the backup script.
+Screenshots:
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/85b029e5-e49f-40c2-9490-8fcd3f91cfa2)
 
-1. Go to the Lambda console.
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/533f87d5-9163-4f7c-974e-db9b6eee781e)
 
-2. Create a new function:
-   - **Name**: `BackupToS3Function`
-   - **Runtime**: Python 3.x
-   - **Role**: Use the IAM role created earlier
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/470c1081-86d9-42a7-acf1-b8e4f30a5702)
 
-3. Use the following Python code for the Lambda function:
-   
-   ```python
-   import subprocess
-   import logging
+## Step 4: Configure CloudWatch Logs
+In the Lambda function's configuration, ensure that CloudWatch Logs is enabled to capture the output and errors.
 
-   logger = logging.getLogger()
-   logger.setLevel(logging.INFO)
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/f6dc567d-f847-4624-9581-ac003e10f4bb)
 
-   def lambda_handler(event, context):
-       command = "/home/ubuntu/backup_script.sh"
-       try:
-           result = subprocess.run([command], capture_output=True, text=True, check=True)
-           logger.info(result.stdout)
-           return {
-               'statusCode': 200,
-               'body': 'Backup script executed successfully'
-           }
-       except subprocess.CalledProcessError as e:
-           logger.error(e.stderr)
-           return {
-               'statusCode': 500,
-               'body': 'Backup script execution failed'
-           }
+Verify the log group and log stream in the CloudWatch Logs console to ensure that the logs are being generated.
 
-Upload the backup script (backup_script.sh) to the Lambda function's deployment package.
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/f5a09b1c-706a-424a-baac-6f87065c0dc2)
 
-### 3. Create EventBridge Rule
 
-Create an EventBridge rule to trigger the Lambda function on a schedule.
+## Final Setup on the EC2 Instance
+Ensure the IAM Role with S3 and CloudWatch permissions is attached to the EC2 instance.
 
-Go to the EventBridge console.
+Install the AWS CLI if it's not already installed
 
-Create a new rule:
+Ensure the AWS credentials are configured on the EC2 instance.
 
-Name: DailyBackupRule
+## S3 Bucket 
 
-Event Source: EventBridge
+Screenshot afer back up is  done 
 
-Schedule: Cron expression (e.g., cron(0 0 * * ? *) for daily at midnight)
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/b7e0e569-ccd9-4393-af44-2459a90c2a12)
 
-Add a target:
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/c788bf6f-8274-4b60-a359-710584c6229a)
 
-Target: Lambda function
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/b427c14c-541a-4cc7-9dfd-0f7b930b0f18)
 
-Function: BackupToS3Function
-
-### 4. Create CloudWatch Log Group
-
-Ensure CloudWatch logging is enabled to monitor the execution of the Lambda function.
-
-Go to the CloudWatch console.
-
-Create a new log group (if not already created):
-
-Name: /aws/lambda/BackupToS3Function
-
-Backup Script 
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/b17bc9ba-f47c-4619-a89f-013e4b34fca8)
 
 
 ## Conclusion
-By following this guide, you will have set up an automated backup solution that uses CloudWatch, EventBridge, and Lambda to back up your directories to an S3 bucket. This setup ensures that backups are performed regularly without manual intervention.
+With these steps, you have a complete setup where directories from an EC2 instance is backed up daily at 2 AM using AWS EventBridge and Lambda, and logs are maintained in CloudWatch Logs. The Lambda function triggers an SSM command to execute the backup script on the EC2 instance, and the script handles the backup and deletion of old files.
