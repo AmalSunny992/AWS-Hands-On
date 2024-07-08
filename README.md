@@ -54,9 +54,9 @@ A complete setup where directories from an EC2 instance is backed up daily at 2 
 
 ### 7. Docker-EBS-Persistent-Volume
 
-A complete setup where directories from an EC2 instance is backed up daily at 2 AM using AWS EventBridge and Lambda, and logs are maintained in CloudWatch Logs. The Lambda function triggers an SSM command to execute the backup script on the EC2 instance, and the script handles the backup and deletion of old files.
+This guide provides a high-level overview of deploying a Docker container on an EC2 instance with persistent storage from an EBS volume.
 
-[Detailed Guide](./Handson-Lambda-EventBridge-CloudWatch.md)
+[Detailed Guide](./Handson-Docker-EBS-Persistent-Volume.md)
 
 ## License
 
