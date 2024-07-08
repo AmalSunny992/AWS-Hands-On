@@ -33,12 +33,15 @@ It also includes additional features like integrating with AWS Lambda, Amazon SQ
 
 ### 4. Increase EC2 Volume size
 
-[Detailed Guide](./Handson-SNS.md)
+This guide provides detailed instructions on how to modify the Elastic Block Store (EBS) volume and extend the file system to utilize the additional space. Ensuring proper volume resizing can help accommodate growing data needs and improve instance performance without causing downtime or data corruption. By following these steps, you can efficiently manage your EC2 storage and ensure your applications continue to run smoothly.
+
+[Detailed Guide](./Handson-Ec2-increase-volume.md)
 
 ### 5. Auto Backup Files to S3
+
 This guide contains a shell script designed to back up 10 different directories on an EC2 instance to an AWS S3 bucket. The script also includes functionality to delete files older than 3 days from the local directories after the backup is completed. The backup process runs automatically using a cron job.
 
-[Detailed Guide](./Backup-Files-to-S3.md)
+[Detailed Guide](./Handson-Backup-Files-to-S3.md)
 
 ## License
 
