@@ -1,0 +1,47 @@
+[2024-07-08 05:36:10] ========================================================================[Backup started]================================================================
+[2024-07-08 05:36:10] Backing up config-files to s3://my-ubuntu-backup/backups/20240708053610/config-files
+upload: config-files/testfile.txt to s3://my-ubuntu-backup/backups/20240708053610/config-files/testfile.txt
+[2024-07-08 05:36:11] Successfully backed up config-files
+[2024-07-08 05:36:11] Deleting files older than 3 days in config-files
+[2024-07-08 05:36:11] Successfully deleted old files in config-files
+[2024-07-08 05:36:11] Backing up config-tables to s3://my-ubuntu-backup/backups/20240708053610/config-tables
+upload: config-tables/testfile2.txt to s3://my-ubuntu-backup/backups/20240708053610/config-tables/testfile2.txt
+[2024-07-08 05:36:12] Successfully backed up config-tables
+[2024-07-08 05:36:12] Deleting files older than 3 days in config-tables
+[2024-07-08 05:36:12] Successfully deleted old files in config-tables
+[2024-07-08 05:36:12] Backing up os-config to s3://my-ubuntu-backup/backups/20240708053610/os-config
+upload: os-config/backuposconfig.sh to s3://my-ubuntu-backup/backups/20240708053610/os-config/backuposconfig.sh
+upload: os-config/backup/backup_20240708.tar.gz to s3://my-ubuntu-backup/backups/20240708053610/os-config/backup/backup_20240708.tar.gz
+[2024-07-08 05:36:16] Successfully backed up os-config
+[2024-07-08 05:36:16] Deleting files older than 3 days in os-config
+[2024-07-08 05:36:16] Successfully deleted old files in os-config
+[2024-07-08 05:36:16] Backing up sys-config to s3://my-ubuntu-backup/backups/20240708053610/sys-config
+upload: sys-config/testfile3.txt to s3://my-ubuntu-backup/backups/20240708053610/sys-config/testfile3.txt
+[2024-07-08 05:36:16] Successfully backed up sys-config
+[2024-07-08 05:36:16] Deleting files older than 3 days in sys-config
+[2024-07-08 05:36:16] Successfully deleted old files in sys-config
+[2024-07-08 05:36:16] Backing up sys-control to s3://my-ubuntu-backup/backups/20240708053610/sys-control
+[2024-07-08 05:36:17] Successfully backed up sys-control
+[2024-07-08 05:36:17] Deleting files older than 3 days in sys-control
+[2024-07-08 05:36:17] Successfully deleted old files in sys-control
+[2024-07-08 05:36:17] Backing up sys-data to s3://my-ubuntu-backup/backups/20240708053610/sys-data
+[2024-07-08 05:36:18] Successfully backed up sys-data
+[2024-07-08 05:36:18] Deleting files older than 3 days in sys-data
+[2024-07-08 05:36:18] Successfully deleted old files in sys-data
+[2024-07-08 05:36:18] Backing up sys-updates to s3://my-ubuntu-backup/backups/20240708053610/sys-updates
+[2024-07-08 05:36:19] Successfully backed up sys-updates
+[2024-07-08 05:36:19] Deleting files older than 3 days in sys-updates
+[2024-07-08 05:36:19] Successfully deleted old files in sys-updates
+[2024-07-08 05:36:19] Backing up usr-config to s3://my-ubuntu-backup/backups/20240708053610/usr-config
+[2024-07-08 05:36:20] Successfully backed up usr-config
+[2024-07-08 05:36:20] Deleting files older than 3 days in usr-config
+[2024-07-08 05:36:20] Successfully deleted old files in usr-config
+[2024-07-08 05:36:20] Backing up usr-control to s3://my-ubuntu-backup/backups/20240708053610/usr-control
+[2024-07-08 05:36:21] Successfully backed up usr-control
+[2024-07-08 05:36:21] Deleting files older than 3 days in usr-control
+[2024-07-08 05:36:21] Successfully deleted old files in usr-control
+[2024-07-08 05:36:21] Backing up usr-data to s3://my-ubuntu-backup/backups/20240708053610/usr-data
+[2024-07-08 05:36:22] Successfully backed up usr-data
+[2024-07-08 05:36:22] Deleting files older than 3 days in usr-data
+[2024-07-08 05:36:22] Successfully deleted old files in usr-data
+[2024-07-08 05:36:22] ==================================================================[Backup completed]===================================================================
