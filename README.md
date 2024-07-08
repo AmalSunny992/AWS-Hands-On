@@ -10,6 +10,7 @@ This repository contains step-by-step guides for hands-on AWS projects done by m
 4. [Increase volume of ec2 machine](#4-increase-ec2-volume-size)
 5. [Auto Backup Files to S3 using Bash Script and Cron Job](#5-auto-backup-files-to-s3-using-bash-script-and-cron-job)
 6. [Auto Backup Files to S3 using Lambda-EventBridge-CloudWatch](#6-auto-backup-files-to-s3-using-lambda-eventbridge-cloudwatch)
+7. [Docker-EBS-Persistent-Volume]()
 
 ## Projects Overview
 
@@ -51,6 +52,11 @@ A complete setup where directories from an EC2 instance is backed up daily at 2 
 
 [Detailed Guide](./Handson-Lambda-EventBridge-CloudWatch.md)
 
+### 7. Docker-EBS-Persistent-Volume
+
+A complete setup where directories from an EC2 instance is backed up daily at 2 AM using AWS EventBridge and Lambda, and logs are maintained in CloudWatch Logs. The Lambda function triggers an SSM command to execute the backup script on the EC2 instance, and the script handles the backup and deletion of old files.
+
+[Detailed Guide](./Handson-Lambda-EventBridge-CloudWatch.md)
 
 ## License
 
