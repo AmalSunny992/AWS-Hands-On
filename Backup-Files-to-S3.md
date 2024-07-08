@@ -50,7 +50,9 @@ Deletes files older than 3 days in a specified directory and logs the process.
 The script iterates over the directories listed in BACKUP_DIRS, backing up each one to the S3 bucket and then deleting files older than 3 days from the local directory. 
 The process is logged for monitoring and troubleshooting purposes.
 
-Script File : [](./)
+## Script
+
+Script File : [backup-to-s3](./backup-to-s3.sh)
 
 
 Make the script executable:
@@ -78,7 +80,7 @@ crontab -e
 
 ## Example Log Output
 
-Log File : backup_to_s3.log
+Log File : [backup_to_s3.log](./backup_to_s3.log)
 
 ## Troubleshooting
 Ensure that the AWS CLI is properly installed and configured.
