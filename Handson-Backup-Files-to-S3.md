@@ -11,6 +11,8 @@ Before running the script, ensure the following:
 
 **AWS S3 Bucket**: A designated S3 bucket where the backups will be stored.
 
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/164d76c0-f195-4091-8428-6a7d2abcb146)
+
 **Log Directory**: Ensure the log directory ($HOME/backup-log/) exists.
 
 ## Script Overview
@@ -77,6 +79,11 @@ crontab -e
 
 #Save and exit the editor.
 ```
+Screenshots of bacjed up s3 bucket : 
+
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/5b3569db-110d-4d68-84ba-17b47fc61234)
+
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/a2f9f091-d29e-491a-913e-b7208c4427d1)
 
 ## Example Log Output
 
