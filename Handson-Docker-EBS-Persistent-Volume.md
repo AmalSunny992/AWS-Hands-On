@@ -21,10 +21,14 @@ aws ec2 create-volume --availability-zone us-west-2a --size 10 --volume-type gp2
 #Save the Volume ID from the response, e.g., vol-1234567890abcdef0.
 ```
 
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/fffb12bd-8e34-48d6-ad54-15679e6f2dbc)
+
+
 ### Step 2: Attach the EBS Volume to the EC2 Instance
 ```sh
 aws ec2 attach-volume --volume-id vol-1234567890abcdef0 --instance-id i-1234567890abcdef0 --device /dev/sdf
 ```
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/0dec7109-4409-44d1-9654-36118c86f068)
 
 ### Step 3: Install Docker on the EC2 Instance
 
@@ -74,10 +78,16 @@ sudo mount /dev/xvdf /mnt/ebs
 sudo chown ec2-user:ec2-user /mnt/ebs
 ```
 
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/d587a0aa-fbd0-49d4-b132-320a63cc059f)
+
 Run the Docker container with the EBS volume mounted:
 
 ```sh
 docker run -d -p 80:80 -v /mnt/ebs:/usr/share/nginx/html <your-dockerhub-username>/my-nginx:latest
 ```
+
+![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/4e56557c-18f8-4f12-925a-82411b86f269)
+
+
 ## Conclusion
 This guide provides a high-level overview of deploying a Docker container on an EC2 instance with persistent storage from an EBS volume.
