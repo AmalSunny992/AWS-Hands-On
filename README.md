@@ -7,7 +7,9 @@ This repository contains step-by-step guides for hands-on AWS projects done by m
 1. [Setting up a WordPress site using LightSail and a Load Balancer](#1-wordpress-site-on-lightsail-with-load-balancer)
 2. [Hosting a static website on S3 with CloudFront and a custom domain using Route 53](#2-static-website-hosting-on-s3-with-cloudfront-and-route-53)
 3. [Creating and using Amazon Simple Notification Service (SNS)](#3-amazon-simple-notification-service-sns)
-4. [How to increase volume of ec2 machine](./)
+4. [Increase volume of ec2 machine](#4-increase-ec2-volume-size)
+5. [Auto Backup Files to S3 using Bash Script and Cron Job]()
+6. [Auto Backup Files to S3 using Lambda-EventBridge-CloudWatch]()
 
 ## Projects Overview
 
@@ -37,11 +39,18 @@ This guide provides detailed instructions on how to modify the Elastic Block Sto
 
 [Detailed Guide](./Handson-Ec2-increase-volume.md)
 
-### 5. Auto Backup Files to S3
+### 5. Auto Backup Files to S3 using Bash Script and Cron Job
 
 This guide contains a shell script designed to back up 10 different directories on an EC2 instance to an AWS S3 bucket. The script also includes functionality to delete files older than 3 days from the local directories after the backup is completed. The backup process runs automatically using a cron job.
 
 [Detailed Guide](./Handson-Backup-Files-to-S3.md)
+
+### 6. Auto Backup Files to S3 using Lambda-EventBridge-CloudWatch
+
+A complete setup where directories from an EC2 instance is backed up daily at 2 AM using AWS EventBridge and Lambda, and logs are maintained in CloudWatch Logs. The Lambda function triggers an SSM command to execute the backup script on the EC2 instance, and the script handles the backup and deletion of old files.
+
+[Detailed Guide](./Handson-Lambda-EventBridge-CloudWatch.md)
+
 
 ## License
 
