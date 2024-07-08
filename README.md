@@ -8,8 +8,8 @@ This repository contains step-by-step guides for hands-on AWS projects done by m
 2. [Hosting a static website on S3 with CloudFront and a custom domain using Route 53](#2-static-website-hosting-on-s3-with-cloudfront-and-route-53)
 3. [Creating and using Amazon Simple Notification Service (SNS)](#3-amazon-simple-notification-service-sns)
 4. [Increase volume of ec2 machine](#4-increase-ec2-volume-size)
-5. [Auto Backup Files to S3 using Bash Script and Cron Job]()
-6. [Auto Backup Files to S3 using Lambda-EventBridge-CloudWatch]()
+5. [Auto Backup Files to S3 using Bash Script and Cron Job](#5-auto-backup-files-to-s3-using-bash-script-and-cron-job)
+6. [Auto Backup Files to S3 using Lambda-EventBridge-CloudWatch](#6-auto-backup-files-to-s3-using-lambda-eventbridge-cloudwatch)
 
 ## Projects Overview
 
