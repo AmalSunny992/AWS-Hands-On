@@ -1,7 +1,7 @@
 # Automated Backup Solution with AWS CloudWatch, EventBridge, and Lambda
 
-Step-by-Step Guide to Back Up an EC2 Instance Named Jenkins Using AWS EventBridge and Lambda
-We'll create a solution where an AWS Lambda function backs up specific directories from an EC2 instance named Jenkins daily at 2 AM. 
+Step-by-Step Guide to Back Up Directories from an EC2 Instance Using AWS EventBridge and Lambda
+We'll create a solution where an AWS Lambda function backs up specific directories from an EC2 instance daily at 2 AM.
 The backup will be stored in an S3 bucket and files older than 3 days will be deleted from the mentioned directories. 
 CloudWatch Logs will be used for logging.
 
