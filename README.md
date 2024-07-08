@@ -31,6 +31,15 @@ It also includes additional features like integrating with AWS Lambda, Amazon SQ
 
 [Detailed Guide](./Handson-SNS.md)
 
+### 4. Increase EC2 Volume size
+
+[Detailed Guide](./Handson-SNS.md)
+
+### 5. Auto Backup Files to S3
+This guide contains a shell script designed to back up 10 different directories on an EC2 instance to an AWS S3 bucket. The script also includes functionality to delete files older than 3 days from the local directories after the backup is completed. The backup process runs automatically using a cron job.
+
+[Detailed Guide](./Backup-Files-to-S3.md)
+
 ## License
 
 This project is licensed under the terms of the Apache license. See the LICENSE file for details.
