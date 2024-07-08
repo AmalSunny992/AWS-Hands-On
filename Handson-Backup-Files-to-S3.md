@@ -79,7 +79,7 @@ crontab -e
 
 #Save and exit the editor.
 ```
-Screenshots of bacjed up s3 bucket : 
+Screenshots of backed up s3 bucket : 
 
 ![image](https://github.com/AmalSunny992/AWS-Hands-On/assets/169422802/5b3569db-110d-4d68-84ba-17b47fc61234)
 
