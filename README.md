@@ -2,8 +2,6 @@
 # AWS Hands-On Projects
 This repository contains step-by-step guides for hands-on AWS projects.
 
-Happy Learning!
-
 ## Table Of Contents
 
 1. [Setting up a WordPress site using LightSail and a Load Balancer](#1-wordpress-site-on-lightsail-with-load-balancer)
